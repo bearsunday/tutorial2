@@ -6,11 +6,16 @@
     "require": {
         "php": ">=7.0.0",
         "bear/package": "^1.8.2",
-        "josegonzalez/dotenv": "^3.2"
+        "josegonzalez/dotenv": "^3.2",
+        "bear/aura-router-module": "^2.0",
+        "ray/identity-value-module": "^0.1.0",
+        "ray/query-module": "^0.2.1"
     },
     "require-dev": {
         "bear/qatools": "^1.5",
-        "roave/security-advisories": "dev-master"
+        "roave/security-advisories": "dev-master",
+        "robmorgan/phinx": "^0.10.6",
+        "bear/api-doc": "^0.3.0"
     },
     "autoload": {
         "psr-4": {
