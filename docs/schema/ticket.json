@@ -1,0 +1,51 @@
+{
+    "$id": "http://www.example.com/ticket.json",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Ticket",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "string",
+            "description": "The unique identifier for a ticket."
+        },
+        "title": {
+            "type": "string",
+            "description": "The title of the ticket",
+            "minLength": 3,
+            "maxLength": 255
+        },
+        "description": {
+            "type": "string",
+            "description": "The description of the ticket",
+            "maxLength": 255
+        },
+        "assignee": {
+            "type": "string",
+            "description": "The assignee of the ticket",
+            "maxLength": 255
+        },
+        "status": {
+            "description": "The name of the status",
+            "type": "string",
+            "maxLength": 255
+        },
+        "created_at": {
+            "description": "The date and time that the ticket was created",
+            "type": "string",
+            "format": "datetime"
+        },
+        "updated_at": {
+            "description": "The date and time that the ticket was last modified",
+            "type": "string",
+            "format": "datetime"
+        }
+    },
+    "required": [
+        "title",
+        "description",
+        "status",
+        "created_at",
+        "updated_at"
+    ],
+    "additionalProperties": false
+}
