@@ -32,6 +32,7 @@
             "php bin/setup.php"
         ],
         "compile": "bear.compile 'MyVendor\\Ticket' prod-app ./",
+        "doc": "bear.apidoc 'MyVendor\\Ticket' ./ docs",
         "test": [
             "phpunit"
         ],
@@ -58,6 +59,7 @@
     },
     "scripts-descriptions": {
         "setup": "Setup the project",
+        "doc": "Create API document",
         "compile": "Compile autoload and DI scripts",
         "test": "Run unit tests",
         "tests": "Run tests and quality checks",
