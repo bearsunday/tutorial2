@@ -1,0 +1,14 @@
+.env
+.php_cs
+.php_cs.cache
+.DS_Store
+/.idea/
+/vendor/
+/build/
+/var/log/
+/var/tmp/
+phpunit.xml
+!var/log/.gitkeep
+!var/tmp/cache/.gitkeep
+!var/tmp/di/.gitkeep
+/docs/api/
