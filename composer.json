@@ -39,7 +39,7 @@
         "tests": [
             "@cs",
             "phpmd src,tests text ./phpmd.xml",
-            "phpstan analyse -l max src tests -c phpstan.neon --no-progress",
+            "phpstan analyse -l 5 src tests -c phpstan.neon --no-progress",
             "@test"
         ],
         "coverage": [

@@ -14,7 +14,7 @@ class TicketsTest extends TestCase
      */
     private $resource;
 
-    protected function setUp()
+    protected function setUp() : void
     {
         $this->resource = (new AppInjector('MyVendor\Ticket', 'test-app'))->getInstance(ResourceInterface::class);
     }
@@ -28,7 +28,7 @@ class TicketsTest extends TestCase
             'assignee' => 'assignee1'
         ]);
         $this->assertSame(201, $ro->code);
-        $this->assertContains('/ticket?id=', $ro->headers['Location']);
+        $this->assertStringContainsString('/ticket?id=', $ro->headers['Location']);
 
         return $ro;
     }
