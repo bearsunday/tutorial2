@@ -5,12 +5,17 @@
     "description": "",
     "require": {
         "php": ">=7.1.0",
-        "bear/package": "^1.9"
+        "bear/package": "^1.9",
+        "bear/aura-router-module": "^2.0",
+        "ray/identity-value-module": "^0.2.0",
+        "ray/query-module": "^0.5.0"
     },
     "require-dev": {
         "bear/qatools": "^1.9",
         "josegonzalez/dotenv": "^3.2",
-        "roave/security-advisories": "dev-master"
+        "roave/security-advisories": "dev-master",
+        "robmorgan/phinx": "^0.10.8",
+        "bear/api-doc": "^0.4.0"
     },
     "autoload": {
         "psr-4": {
