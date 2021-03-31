@@ -1,0 +1,131 @@
+<html lang="en">
+<head>
+    <title>title</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/3.0.1/github-markdown.min.css">
+    <style>
+        .markdown-body {
+            box-sizing: border-box;
+            min-width: 200px;
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 25px;
+        }
+    
+        @media (max-width: 767px) {
+            .markdown-body {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="markdown-body">
+        <h1>/tickets/{id}</h1>
+
+<h2>GET</h2>
+
+<h3>Request</h3>
+
+<table>
+<thead>
+<tr>
+  <th>Name</th>
+  <th>Type</th>
+  <th>Description</th>
+  <th>Default</th>
+  <th>Required</th>
+  <th>Constraints</th>
+  <th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>id</td>
+  <td>string</td>
+  <td></td>
+  <td></td>
+  <td>Required</td>
+  <td></td>
+  <td></td>
+</tr>
+</tbody>
+</table>
+
+<h3>Response</h3>
+
+<p><a href="schema/ticket.json">Object: Ticket</a></p>
+
+<table>
+<thead>
+<tr>
+  <th>Name</th>
+  <th>Type</th>
+  <th>Description</th>
+  <th>Required</th>
+  <th>Constraint</th>
+  <th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>id</td>
+  <td>string</td>
+  <td>The unique identifier for a ticket.</td>
+  <td>Optional</td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td>title</td>
+  <td>string</td>
+  <td>The title of the ticket</td>
+  <td>Optional</td>
+  <td>{"minLength":3,"maxLength":255}</td>
+  <td></td>
+</tr>
+<tr>
+  <td>description</td>
+  <td>string</td>
+  <td>The description of the ticket</td>
+  <td>Optional</td>
+  <td>{"maxLength":255}</td>
+  <td></td>
+</tr>
+<tr>
+  <td>assignee</td>
+  <td>string</td>
+  <td>The assignee of the ticket</td>
+  <td>Optional</td>
+  <td>{"maxLength":255}</td>
+  <td></td>
+</tr>
+<tr>
+  <td>status</td>
+  <td>string</td>
+  <td>The name of the status</td>
+  <td>Optional</td>
+  <td>{"maxLength":255}</td>
+  <td></td>
+</tr>
+<tr>
+  <td>created_at</td>
+  <td>string</td>
+  <td>The date and time that the ticket was created</td>
+  <td>Optional</td>
+  <td>{"format":"datetime"}</td>
+  <td></td>
+</tr>
+<tr>
+  <td>updated_at</td>
+  <td>string</td>
+  <td>The date and time that the ticket was last modified</td>
+  <td>Optional</td>
+  <td>{"format":"datetime"}</td>
+  <td></td>
+</tr>
+</tbody>
+</table>
+
+    </div>
+</body>
+</html>
