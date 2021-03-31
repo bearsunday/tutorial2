@@ -1,5 +1,5 @@
 <?php
-require dirname(__DIR__) . '/autoload.php';
+require dirname(__DIR__) . '/vendor/autoload.php';
 require_once dirname(__DIR__) . '/env.php';
 // dir
 chdir(dirname(__DIR__));
