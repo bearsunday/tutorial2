@@ -10,7 +10,8 @@
         "bear/resource": "^1.17",
         "bear/sunday": "^1.6",
         "ray/aop": "^2.12",
-        "ray/di": "^2.14"
+        "ray/di": "^2.14",
+        "robmorgan/phinx": "^0.11.7"
     },
     "require-dev": {
         "bear/api-doc": "^1.1",
