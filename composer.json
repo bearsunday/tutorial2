@@ -12,12 +12,14 @@
         "bear/resource": "^1.15",
         "bear/sunday": "^1.5",
         "ray/aop": "^2.10",
-        "ray/di": "^2.11"
+        "ray/di": "^2.11",
+        "ray/identity-value-module": "^1.0",
+        "ray/media-query": "^0"
     },
     "require-dev": {
         "bamarni/composer-bin-plugin": "^1.4",
         "bear/api-doc": "1.x-dev",
-        "bear/devtools": "^0.1",
+        "bear/devtools": "^1.0",
         "phpunit/phpunit": "^9.5",
         "roave/security-advisories": "dev-master",
         "robmorgan/phinx": "^0.12.7"
@@ -89,6 +91,9 @@
     },
     "config": {
         "sort-packages": true,
-        "process-timeout": 0
+        "process-timeout": 0,
+        "allow-plugins": {
+            "bamarni/composer-bin-plugin": true
+        }
     }
 }
