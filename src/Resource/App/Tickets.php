@@ -20,7 +20,7 @@ class Tickets extends ResourceObject
     public function __construct(
         private TicketQueryInterface $query,
         private TicketCommandInterface $command,
-        private UuidInterface $uuid
+        private UuidInterface $uuid,
     ) {
     }
 

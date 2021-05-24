@@ -10,5 +10,5 @@ use Ray\MediaQuery\Annotation\DbQuery;
 interface TicketCommandInterface
 {
     #[DbQuery('ticket_add')]
-    public function add(string $id, string $title, ?DateTimeInterface $dateCreated = null): void;
+    public function add(string $id, string $title, DateTimeInterface|null $dateCreated = null): void;
 }

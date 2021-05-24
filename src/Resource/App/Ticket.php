@@ -9,12 +9,13 @@ use BEAR\Resource\Annotation\JsonSchema;
 use BEAR\Resource\Request;
 use BEAR\Resource\ResourceObject;
 use MyVendor\Ticket\Query\TicketQueryInterface;
+
 use function assert;
 
 class Ticket extends ResourceObject
 {
     public function __construct(
-        private TicketQueryInterface $query
+        private TicketQueryInterface $query,
     ) {
     }
 
@@ -23,7 +24,7 @@ class Ticket extends ResourceObject
     public function onGet(string $id = ''): static
     {
         assert($this->body['project'] instanceof Request);
-        $this->body += $this->query->item($id);
+        $this->body += (array) $this->query->item($id);
 
         return $this;
     }
