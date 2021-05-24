@@ -5,4 +5,4 @@ declare(strict_types=1);
 use MyVendor\Ticket\Bootstrap;
 
 require dirname(__DIR__, 2) . '/vendor/autoload.php';
-exit((new Bootstrap())('hal-api-app', $GLOBALS, $_SERVER));
+exit((new Bootstrap())('test-hal-api-app', $GLOBALS, $_SERVER));
