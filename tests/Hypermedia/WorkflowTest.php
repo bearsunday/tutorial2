@@ -18,7 +18,7 @@ class WorkflowTest extends TestCase
 
     protected function setUp(): void
     {
-        $injector = Injector::getInstance('hal-api-app');
+        $injector = Injector::getInstance('test-hal-api-app');
         $this->resource = $injector->getInstance(ResourceInterface::class);
     }
 
@@ -30,9 +30,7 @@ class WorkflowTest extends TestCase
         return $index;
     }
 
-    /**
-     * @depends testIndex
-     */
+    /** @depends testIndex */
     public function testGoTickets(ResourceObject $response): ResourceObject
     {
         $json = (string) $response;
@@ -43,9 +41,7 @@ class WorkflowTest extends TestCase
         return $ro;
     }
 
-    /**
-     * @depends testGoTickets
-     */
+    /** @depends testGoTickets */
     public function testDoPost(ResourceObject $response): ResourceObject
     {
         $json = (string) $response;
@@ -56,9 +52,7 @@ class WorkflowTest extends TestCase
         return $ro;
     }
 
-    /**
-     * @depends testDoPost
-     */
+    /** @depends testDoPost */
     public function testGoTicket(ResourceObject $response): ResourceObject
     {
         $href = $response->headers[ResponseHeader::LOCATION];
