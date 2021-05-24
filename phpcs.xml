@@ -32,6 +32,7 @@
         <exclude name="SlevomatCodingStandard.Classes.SuperfluousExceptionNaming"/>
         <exclude name="SlevomatCodingStandard.Classes.SuperfluousInterfaceNaming"/>
         <exclude name="Squiz.Strings.DoubleQuoteUsage.ContainsVar"/>
+        <exclude name="Squiz.PHP.LowercasePHPFunctions.CallUppercase"/>
         <!-- Exclude files -->
         <exclude-pattern>*/tests/Fake/*</exclude-pattern>
         <exclude-pattern>*/tmp/*</exclude-pattern>
