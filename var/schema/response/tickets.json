@@ -1,0 +1,17 @@
+{
+  "$id": "tickets.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Tickets",
+  "type": "object",
+  "examples": [
+    {"$ref": "example/tickets.json"}
+  ],
+  "required": ["tickets"],
+  "properties": {
+    "tickets": {
+        "type": "array",
+        "items":{"$ref": "./ticket.json"}
+    }
+  }
+}
+
