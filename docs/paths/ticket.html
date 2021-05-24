@@ -1,0 +1,144 @@
+<html lang="en">
+<head>
+    <title>MyVendor\Ticket /ticket</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/3.0.1/github-markdown.min.css">
+    <style>
+        .markdown-body {
+            box-sizing: border-box;
+            min-width: 200px;
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 25px;
+        }
+    
+        @media (max-width: 767px) {
+            .markdown-body {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="markdown-body">
+        <p><a href="../index.html" style="color: black; text-decoration: none;">MyVendor.Ticket API</a></p>
+
+<h1>/ticket</h1>
+
+<h2>GET</h2>
+
+<p><strong>Request</strong></p>
+
+<table>
+<thead>
+<tr>
+  <th>Name</th>
+  <th>Type</th>
+  <th>Description</th>
+  <th>Default</th>
+  <th>Required</th>
+  <th>Constraints</th>
+  <th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>id</td>
+  <td>string</td>
+  <td></td>
+  <td></td>
+  <td>Optional</td>
+  <td></td>
+  <td></td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>Response</strong></p>
+
+<p><a href="../schema/ticket.json">Object: Ticket</a></p>
+
+<table>
+<thead>
+<tr>
+  <th>Name</th>
+  <th>Type</th>
+  <th>Description</th>
+  <th>Required</th>
+  <th>Constraint</th>
+  <th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>id</td>
+  <td>string</td>
+  <td>The unique identifier for a ticket.</td>
+  <td>Optional</td>
+  <td>{"maxLength":64}</td>
+  <td></td>
+</tr>
+<tr>
+  <td>title</td>
+  <td>string</td>
+  <td>The unique identifier for a ticket.</td>
+  <td>Optional</td>
+  <td>{"maxLength":255}</td>
+  <td></td>
+</tr>
+<tr>
+  <td>dateCreated</td>
+  <td>string</td>
+  <td>The date and time that the ticket was created</td>
+  <td>Optional</td>
+  <td>{"format":"datetime"}</td>
+  <td></td>
+</tr>
+</tbody>
+</table>
+
+<h4>Embedded</h4>
+
+<table>
+<thead>
+<tr>
+  <th>rel</th>
+  <th>src</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>project</td>
+  <td><a href="project.html"><code>/project</code></a></td>
+</tr>
+</tbody>
+</table>
+
+<h4>Example</h4>
+
+<pre>
+<code>{
+    "id": "81c08016-d2e2-4e93-8982-39e4c905bb18",
+    "title": "title1",
+    "created_at": "2021-05-18 16:30:35",
+    "_embedded": {
+        "event": {
+            "event": "Nice event",
+            "_links": {
+                "self": {
+                    "href": "\/event?ticketId=81c08016-d2e2-4e93-8982-39e4c905bb18"
+                }
+            }
+        }
+    },
+    "_links": {
+        "self": {
+            "href": "\/ticket?id=81c08016-d2e2-4e93-8982-39e4c905bb18"
+        }
+    }
+}</code>
+
+</pre>
+
+    </div>
+</body>
+</html>
