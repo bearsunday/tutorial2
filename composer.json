@@ -9,8 +9,11 @@
         "bear/package": "^1.14",
         "bear/resource": "^1.17",
         "bear/sunday": "^1.6",
+        "koriym/query-locator": "^1.5",
         "ray/aop": "^2.12",
         "ray/di": "^2.14",
+        "ray/identity-value-module": "^1.0",
+        "ray/media-query": "^0.12",
         "robmorgan/phinx": "^0.11.7"
     },
     "require-dev": {
