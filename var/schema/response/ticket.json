@@ -1,0 +1,27 @@
+{
+  "$id": "ticket.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Ticket",
+  "type": "object",
+  "examples": [
+    {"$ref": "example/ticket.json"}
+  ],
+  "required": ["id", "title", "dateCreated"],
+  "properties": {
+    "id": {
+      "description": "The unique identifier for a ticket.",
+      "type": "string",
+      "maxLength": 64
+    },
+    "title": {
+      "description": "The unique identifier for a ticket.",
+      "type": "string",
+      "maxLength": 255
+    },
+    "dateCreated": {
+      "description": "The date and time that the ticket was created",
+      "type": "string",
+      "format": "datetime"
+    }
+  }
+}
