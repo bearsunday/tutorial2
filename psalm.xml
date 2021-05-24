@@ -17,6 +17,7 @@
         <MissingConstructor>
             <errorLevel type="suppress">
                 <directory name="src/Resource"/>
+                <directory name="src/Entity"/>
             </errorLevel>
         </MissingConstructor>
         <NonInvariantDocblockPropertyType>
