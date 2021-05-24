@@ -4,13 +4,17 @@ declare(strict_types=1);
 
 namespace MyVendor\Ticket\Query;
 
+use MyVendor\Ticket\Entity\Ticket;
 use Ray\MediaQuery\Annotation\DbQuery;
 
 interface TicketQueryInterface
 {
-    #[DbQuery('ticket_item')]
-    public function item(string $id): array;
+    #[DbQuery('ticket_item', entity: Ticket::class)]
+    public function item(string $id): Ticket;
 
-    #[DbQuery('ticket_list')]
+    /**
+     * @return array<Ticket>
+     */
+    #[DbQuery('ticket_list', entity: Ticket::class)]
     public function list(): array;
 }
