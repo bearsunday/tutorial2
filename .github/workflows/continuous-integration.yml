@@ -1,0 +1,44 @@
+name: Continuous Integration
+
+on:
+  push:
+    paths-ignore:
+      - '**.md'
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+
+      - name: Setup MySQL
+        uses: shogo82148/actions-setup-mysql@v1
+        with:
+          mysql-version: "8.0"
+      - run: mysql -uroot -e 'SELECT version()'
+
+      - name: Install dependencies
+        run: composer install --prefer-dist --no-progress --no-suggest
+
+      - name: Run test suite
+        run: composer run-script test
+
+      - name: Insert todo seed
+        run: |
+          mysql -u root -e "INSERT INTO ticket (id, title, dateCreated) VALUES ('1', 'foo', '1970-01-01 00:00:00')" ticket
+
+      - name: Request /ticket resource
+        run: |
+          php bin/app.php get '/ticket?id=1'
+
+      - name: Create API doc
+        run: |
+          composer doc
+        
