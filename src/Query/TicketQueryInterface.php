@@ -9,7 +9,7 @@ use Ray\MediaQuery\Annotation\DbQuery;
 
 interface TicketQueryInterface
 {
-    #[DbQuery('ticket_item', entity: Ticket::class)]
+    #[DbQuery('ticket_item', entity: Ticket::class, type:'row')]
     public function item(string $id): Ticket;
 
     /**
