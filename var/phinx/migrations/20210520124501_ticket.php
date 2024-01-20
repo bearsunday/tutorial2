@@ -8,7 +8,7 @@ final class Ticket extends AbstractMigration
     public function change(): void
     {
         $table = $this->table('ticket', ['id' => false, 'primary_key' => ['id']]);
-        $table->addColumn('id', 'uuid')
+        $table->addColumn('id', 'uuid', ['null' => false])
             ->addColumn('title', 'string')
             ->addColumn('dateCreated', 'datetime')
             ->create();
