@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f96a1105c1a5777425ac15c474dd35c0",
+    "content-hash": "3c923e5f638c3e7c3f8147f8a69e3d63",
     "packages": [
         {
             "name": "aura/cli",
@@ -2265,6 +2265,52 @@
             "time": "2022-06-28T09:31:37+00:00"
         },
         {
+            "name": "koriym/query-locator",
+            "version": "1.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/koriym/Koriym.QueryLocator.git",
+                "reference": "2176dbfcb993f50f0a829b80ddacb521c8e97907"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/koriym/Koriym.QueryLocator/zipball/2176dbfcb993f50f0a829b80ddacb521c8e97907",
+                "reference": "2176dbfcb993f50f0a829b80ddacb521c8e97907",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1.0"
+            },
+            "require-dev": {
+                "doctrine/coding-standard": "^9.0",
+                "phpunit/phpunit": "^9.5.10",
+                "ray/di": "^2.7.2",
+                "vimeo/psalm": "^4.12"
+            },
+            "suggest": {
+                "ext-apcu": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Koriym\\QueryLocator\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "A SQL query locator",
+            "keywords": [
+                "sql"
+            ],
+            "support": {
+                "issues": "https://github.com/koriym/Koriym.QueryLocator/issues",
+                "source": "https://github.com/koriym/Koriym.QueryLocator/tree/1.5.0"
+            },
+            "time": "2021-11-09T15:05:27+00:00"
+        },
+        {
             "name": "mobiledetect/mobiledetectlib",
             "version": "3.74.3",
             "source": {
@@ -3896,16 +3942,16 @@
         },
         {
             "name": "ray/media-query",
-            "version": "0.9.0",
+            "version": "0.12.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ray-di/Ray.MediaQuery.git",
-                "reference": "88ae75b06b25f21cf56f798b27e355b70464983d"
+                "reference": "e4413079cb50923196332de85e2c4eb3b9709455"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ray-di/Ray.MediaQuery/zipball/88ae75b06b25f21cf56f798b27e355b70464983d",
-                "reference": "88ae75b06b25f21cf56f798b27e355b70464983d",
+                "url": "https://api.github.com/repos/ray-di/Ray.MediaQuery/zipball/e4413079cb50923196332de85e2c4eb3b9709455",
+                "reference": "e4413079cb50923196332de85e2c4eb3b9709455",
                 "shasum": ""
             },
             "require": {
@@ -3917,6 +3963,8 @@
                 "nikic/php-parser": "^4.15",
                 "pagerfanta/pagerfanta": "^3.5",
                 "php": "^8.0",
+                "phpdocumentor/reflection-docblock": "^5.3",
+                "phpdocumentor/type-resolver": "^1.6.1",
                 "ray/aop": "^2.10.4",
                 "ray/aura-sql-module": "^1.12.0",
                 "ray/di": "^2.12",
@@ -3925,6 +3973,7 @@
             },
             "require-dev": {
                 "doctrine/coding-standard": "^10.0",
+                "koriym/csv-entities": "^1.0",
                 "phpmd/phpmd": "^2.9",
                 "phpmetrics/phpmetrics": "^2.7",
                 "phpstan/phpstan": "^1.7",
@@ -3933,6 +3982,9 @@
                 "rector/rector": "^0.14.8",
                 "squizlabs/php_codesniffer": "^3.7",
                 "vimeo/psalm": "^4.24"
+            },
+            "suggest": {
+                "koriym/csv-entities": "Provides one-to-many entity relation"
             },
             "type": "library",
             "autoload": {
@@ -3953,9 +4005,9 @@
             "description": "Media access mapping Framework",
             "support": {
                 "issues": "https://github.com/ray-di/Ray.MediaQuery/issues",
-                "source": "https://github.com/ray-di/Ray.MediaQuery/tree/0.9.0"
+                "source": "https://github.com/ray-di/Ray.MediaQuery/tree/0.12.0"
             },
-            "time": "2022-11-21T13:54:01+00:00"
+            "time": "2023-11-10T02:26:14+00:00"
         },
         {
             "name": "ray/object-visual-grapher",
